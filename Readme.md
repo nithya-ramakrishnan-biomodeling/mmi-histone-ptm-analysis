@@ -17,7 +17,7 @@ This repository contains a comprehensive pipeline for analyzing post-translation
 - [`ptms_predictions/`](./ptms_predictions/): PTM prediction using XGBoost and OMP
 - [`main.py`](./main.py): Main pipeline orchestrator
 
---
+---
 
 ## Pipeline Overview
 
