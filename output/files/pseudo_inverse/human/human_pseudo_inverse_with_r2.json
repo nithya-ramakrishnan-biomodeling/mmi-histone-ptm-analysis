@@ -1,0 +1,509 @@
+{
+    "H2A.H4R3me2": {
+        "features": [
+            "H3K9me3",
+            "H3K27me2",
+            "H3R2me2",
+            "H3K79me2",
+            "H3K9me2",
+            "H3K79me1",
+            "H3K27me3",
+            "H3K36me1"
+        ],
+        "r_squared": 0.39589939410821806
+    },
+    "H2AZ": {
+        "features": [
+            "H4K8ac",
+            "H2AK9ac",
+            "H3K9me3",
+            "H2AK5ac",
+            "H3K23ac",
+            "H3K18ac",
+            "H3K4ac",
+            "H3K27me3"
+        ],
+        "r_squared": 0.5385007237816644
+    },
+    "H2BK5me1": {
+        "features": [
+            "H3R2me1",
+            "H4K20me1",
+            "H3K9me3",
+            "H3K27me1",
+            "H3K23ac",
+            "H3K27me3",
+            "H4K16ac",
+            "H3K36me1"
+        ],
+        "r_squared": 0.6011475572217193
+    },
+    "H3K4me1": {
+        "features": [
+            "H3K14ac",
+            "H3K36me1",
+            "H2AK5ac",
+            "H3K9me1",
+            "H3K27me1",
+            "H3K23ac",
+            "H3K9ac",
+            "H3R2me1"
+        ],
+        "r_squared": 0.4372383389871788
+    },
+    "H3K4me2": {
+        "features": [
+            "H3K23ac",
+            "H3K9me1",
+            "H3K36me1",
+            "H4K5ac",
+            "H3K14ac",
+            "H4K12ac",
+            "H2BK20ac",
+            "H3K4ac"
+        ],
+        "r_squared": 0.5136796687246774
+    },
+    "H3K4me3": {
+        "features": [
+            "H3K9ac",
+            "H2AK5ac",
+            "H2AZ",
+            "H2AK9ac",
+            "H3K79me3",
+            "H3K27me1",
+            "H4K5ac",
+            "H2BK5ac"
+        ],
+        "r_squared": 0.5266430792208104
+    },
+    "H3K9me1": {
+        "features": [
+            "H3K27me1",
+            "H3K4me2",
+            "H2A.H4R3me2",
+            "H2AK5ac",
+            "H3K36me1",
+            "H3K79me1",
+            "H3K4me1",
+            "H3K23ac"
+        ],
+        "r_squared": 0.5186765017408793
+    },
+    "H3K9me2": {
+        "features": [
+            "H3K27me2",
+            "H2A.H4R3me2",
+            "H3K79me2",
+            "H3K9me3",
+            "H3K79me1",
+            "H3K27me3",
+            "H3K36me1",
+            "H3R2me2"
+        ],
+        "r_squared": 0.23367619458665834
+    },
+    "H3K9me3": {
+        "features": [
+            "H3K79me2",
+            "H2A.H4R3me2",
+            "H4K20me3",
+            "H3K27me2",
+            "H3K27me3",
+            "H3R2me2",
+            "H3K79me1",
+            "H3K9me2"
+        ],
+        "r_squared": 0.45685132983019394
+    },
+    "H3K27me1": {
+        "features": [
+            "H3K27me2",
+            "H3K23ac",
+            "H3K79me2",
+            "H3K14ac",
+            "H3K9me1",
+            "H3K36me1",
+            "H2AK5ac",
+            "H3K79me3"
+        ],
+        "r_squared": 0.3314812930908656
+    },
+    "H3K27me2": {
+        "features": [
+            "H3K27me3",
+            "H2A.H4R3me2",
+            "H3K9me3",
+            "H3K79me2",
+            "H3K9me2",
+            "H3K36me1",
+            "H3K14ac",
+            "H3R2me1"
+        ],
+        "r_squared": 0.3242094391621523
+    },
+    "H3K27me3": {
+        "features": [
+            "H3K27me2",
+            "H3K79me2",
+            "H3K9me3",
+            "H3K79me3",
+            "H2A.H4R3me2",
+            "H3R2me1",
+            "H3K79me1",
+            "H3K36me1"
+        ],
+        "r_squared": 0.23383500733717022
+    },
+    "H3K36me1": {
+        "features": [
+            "H3K79me2",
+            "H3K27me2",
+            "H2A.H4R3me2",
+            "H3K27me3",
+            "H3R2me1",
+            "H3K79me1",
+            "H3K9me2",
+            "H3K23ac"
+        ],
+        "r_squared": 0.2127987653228498
+    },
+    "H3K36me3": {
+        "features": [
+            "H3K79me3",
+            "H3K9me3",
+            "H3K27me3",
+            "H3K27me1",
+            "H2A.H4R3me2",
+            "H3K79me1",
+            "H3K23ac",
+            "H4K20me3"
+        ],
+        "r_squared": 0.38657869737323114
+    },
+    "H3K79me1": {
+        "features": [
+            "H3K79me2",
+            "H2A.H4R3me2",
+            "H3R2me2",
+            "H3K9me3",
+            "H3K27me3",
+            "H3R2me1",
+            "H3K36me1",
+            "H3K27me2"
+        ],
+        "r_squared": 0.20830222245191288
+    },
+    "H3K79me2": {
+        "features": [
+            "H3K9me3",
+            "H3K27me2",
+            "H3K79me1",
+            "H3K27me3",
+            "H2A.H4R3me2",
+            "H3K36me1",
+            "H3R2me2",
+            "H3K14ac"
+        ],
+        "r_squared": 0.10774755655804569
+    },
+    "H3K79me3": {
+        "features": [
+            "H4K20me3",
+            "H3K27me3",
+            "H3K36me3",
+            "H3K9me3",
+            "H3K79me1",
+            "H3R2me1",
+            "H3K23ac",
+            "H3K27me1"
+        ],
+        "r_squared": 0.5104522259032888
+    },
+    "H3R2me1": {
+        "features": [
+            "H3R2me2",
+            "H3K27me2",
+            "H3K27me3",
+            "H3K79me1",
+            "H3K79me2",
+            "H3K36me1",
+            "H2A.H4R3me2",
+            "H3K9me3"
+        ],
+        "r_squared": 0.2667452540604155
+    },
+    "H3R2me2": {
+        "features": [
+            "H2A.H4R3me2",
+            "H3K79me2",
+            "H3R2me1",
+            "H3K79me1",
+            "H3K9me3",
+            "H3K27me3",
+            "H3K9me2",
+            "H3K36me1"
+        ],
+        "r_squared": 0.239289682327812
+    },
+    "H4K20me1": {
+        "features": [
+            "H2BK5me1",
+            "H3K79me1",
+            "H3K27me2",
+            "H3K27me1",
+            "H3K9me2",
+            "H2AK5ac",
+            "H3K14ac",
+            "H3R2me2"
+        ],
+        "r_squared": 0.5552574356342879
+    },
+    "H4K20me3": {
+        "features": [
+            "H3K9me3",
+            "H3K79me3",
+            "H2A.H4R3me2",
+            "H3K27me3",
+            "H3K79me2",
+            "H3K27me2",
+            "H3R2me2",
+            "H3K79me1"
+        ],
+        "r_squared": 0.5265444324720074
+    },
+    "H3K4ac": {
+        "features": [
+            "H2AK9ac",
+            "H4K16ac",
+            "H2BK20ac",
+            "H3K18ac",
+            "H2AK5ac",
+            "H2BK5ac",
+            "H2BK12ac",
+            "H2BK120ac"
+        ],
+        "r_squared": 0.8177454466728679
+    },
+    "H3K9ac": {
+        "features": [
+            "H2BK5ac",
+            "H2AK5ac",
+            "H2AK9ac",
+            "H3K27ac",
+            "H3K23ac",
+            "H2BK120ac",
+            "H4K16ac",
+            "H3K36ac"
+        ],
+        "r_squared": 0.8093604536040263
+    },
+    "H3K14ac": {
+        "features": [
+            "H3K23ac",
+            "H3K79me2",
+            "H3K27me2",
+            "H2BK20ac",
+            "H2AK5ac",
+            "H4K12ac",
+            "H4K16ac",
+            "H3K27me3"
+        ],
+        "r_squared": 0.16188301047287568
+    },
+    "H3K18ac": {
+        "features": [
+            "H3K4ac",
+            "H3K27ac",
+            "H2BK20ac",
+            "H2BK120ac",
+            "H4K8ac",
+            "H3K23ac",
+            "H2AZ",
+            "H3K79me3"
+        ],
+        "r_squared": 0.836192569399411
+    },
+    "H3K23ac": {
+        "features": [
+            "H3K14ac",
+            "H3K79me2",
+            "H2BK20ac",
+            "H2AK5ac",
+            "H4K5ac",
+            "H3K27me1",
+            "H4K12ac",
+            "H3K36me1"
+        ],
+        "r_squared": 0.24689801685026913
+    },
+    "H3K27ac": {
+        "features": [
+            "H2BK5ac",
+            "H3K18ac",
+            "H3K23ac",
+            "H2BK20ac",
+            "H3K9ac",
+            "H3K27me3",
+            "H4K12ac",
+            "H3K27me2"
+        ],
+        "r_squared": 0.8361430280589955
+    },
+    "H3K36ac": {
+        "features": [
+            "H2BK12ac",
+            "H2BK120ac",
+            "H3K9ac",
+            "H3K79me2",
+            "H2AK9ac",
+            "H3K4ac",
+            "H4K5ac",
+            "H2BK20ac"
+        ],
+        "r_squared": 0.7260320714617285
+    },
+    "H4K5ac": {
+        "features": [
+            "H4K8ac",
+            "H3K23ac",
+            "H3K14ac",
+            "H2BK12ac",
+            "H4K16ac",
+            "H2AK5ac",
+            "H2BK120ac",
+            "H3K36ac"
+        ],
+        "r_squared": 0.7452380300722335
+    },
+    "H4K8ac": {
+        "features": [
+            "H4K5ac",
+            "H4K12ac",
+            "H2BK20ac",
+            "H2AK5ac",
+            "H2AZ",
+            "H4K16ac",
+            "H3K9me3",
+            "H3K18ac"
+        ],
+        "r_squared": 0.6961758180620933
+    },
+    "H4K12ac": {
+        "features": [
+            "H2BK20ac",
+            "H3K14ac",
+            "H3K79me2",
+            "H4K8ac",
+            "H3K23ac",
+            "H3K79me1",
+            "H3K27me2",
+            "H3K27ac"
+        ],
+        "r_squared": 0.96266352838582
+    },
+    "H4K16ac": {
+        "features": [
+            "H2AK9ac",
+            "H3K14ac",
+            "H3K4ac",
+            "H4K8ac",
+            "H3K79me1",
+            "H2A.H4R3me2",
+            "H2BK20ac",
+            "H3R2me2"
+        ],
+        "r_squared": 0.5116837552677875
+    },
+    "H4K91ac": {
+        "features": [
+            "H2BK120ac",
+            "H3K4ac",
+            "H3K23ac",
+            "H4K16ac",
+            "H2AK9ac",
+            "H2AK5ac",
+            "H3K18ac",
+            "H2BK20ac"
+        ],
+        "r_squared": 0.759876831910977
+    },
+    "H2AK5ac": {
+        "features": [
+            "H2BK12ac",
+            "H3K14ac",
+            "H2BK20ac",
+            "H3K23ac",
+            "H4K8ac",
+            "H3K9ac",
+            "H3R2me1",
+            "H3K27me2"
+        ],
+        "r_squared": 0.36677498444480516
+    },
+    "H2AK9ac": {
+        "features": [
+            "H3K79me2",
+            "H3K4ac",
+            "H4K16ac",
+            "H3K9me3",
+            "H3K9ac",
+            "H2AZ",
+            "H3K36me1",
+            "H2BK20ac"
+        ],
+        "r_squared": 0.3519522605607306
+    },
+    "H2BK5ac": {
+        "features": [
+            "H3K27ac",
+            "H3K9ac",
+            "H3K4ac",
+            "H2BK20ac",
+            "H4K16ac",
+            "H2BK120ac",
+            "H3K27me1",
+            "H3K27me2"
+        ],
+        "r_squared": 0.8149668718243814
+    },
+    "H2BK12ac": {
+        "features": [
+            "H2AK5ac",
+            "H2BK20ac",
+            "H3K36ac",
+            "H2BK120ac",
+            "H4K5ac",
+            "H3K4ac",
+            "H3K79me2",
+            "H3K27me1"
+        ],
+        "r_squared": 0.724602509296847
+    },
+    "H2BK20ac": {
+        "features": [
+            "H4K12ac",
+            "H3K14ac",
+            "H2BK12ac",
+            "H3K79me2",
+            "H2AK5ac",
+            "H3K23ac",
+            "H4K8ac",
+            "H3K4ac"
+        ],
+        "r_squared": 0.9633436203659438
+    },
+    "H2BK120ac": {
+        "features": [
+            "H2BK12ac",
+            "H2BK20ac",
+            "H3K18ac",
+            "H3K36ac",
+            "H2BK5ac",
+            "H3K9ac",
+            "H4K91ac",
+            "H4K5ac"
+        ],
+        "r_squared": 0.8671388097622204
+    }
+}

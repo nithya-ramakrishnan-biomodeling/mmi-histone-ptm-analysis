@@ -1,0 +1,58 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
+
+# IDE/project files
+.vscode/
+.idea/
+
+# Build files
+build/
+dist/
+*.o
+*.exe
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+
+# Sensitive files
+.env
+
+# Database files
+*.sqlite
+*.db
+
+# Data paths (raw and processed)
+data/processed/human/
+data/processed/yeast/
+data/raw/
+
+# Output files and intermediate results
+output/files/yeast/pca*
+output/files/human/pca*
+output/files/pca/human/histone_cov_with_eig_transf_features.csv
+output/files/pca/human/histone_mi_with_eig_transf_features.csv
+output/files/pca/yeast/histone_cov_with_eig_transf_features.csv
+output/files/pca/yeast/histone_mi_with_eig_transf_features.csv
+
+# General output and results
+output/images/

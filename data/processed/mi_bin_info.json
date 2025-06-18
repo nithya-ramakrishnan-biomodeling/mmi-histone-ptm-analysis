@@ -1,0 +1,14 @@
+{ "human": {
+          "global_max": 40,
+          "global_min": -33,
+          "bin_num": 130
+        },
+        "yeast": {
+          "global_max": 4,
+          "global_min": -6,
+          "bin_num": 100
+        }
+      }
+    
+  
+  
