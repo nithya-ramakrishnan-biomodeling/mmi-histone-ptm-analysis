@@ -6,27 +6,8 @@ This repository contains a comprehensive pipeline for analyzing post-translation
 
 ## Directory Structure
 
-<details>
-<summary>Click to expand directory tree with links</summary>
-
-```
-multivariate_ptms_analysis/
-├── [data/](./data/)                  
-├── [datahandler/](./datahandler/)           
-├── [docs/](./docs/)                  
-├── [mi_btw_yhat_and_y/](./mi_btw_yhat_and_y/)     
-├── [multivariate_mi_analysis/](./multivariate_mi_analysis/) 
-├── [output/](./output/)                
-├── [path_utils/](./path_utils/)            
-├── [pca_analysis/](./pca_analysis/)          
-├── [pseudo_inverse/](./pseudo_inverse/)        
-├── [ptms_predictions/](./ptms_predictions/)      
-├── [main.py](./main.py)                
-```
-
 - [`data/`](./data/): Raw and processed data for human and yeast
 - [`datahandler/`](./datahandler/): Data loading, processing, and file operations
-- [`docs/`](./docs/): Documentation and analysis notebooks
 - [`mi_btw_yhat_and_y/`](./mi_btw_yhat_and_y/): MI between predicted and actual values
 - [`multivariate_mi_analysis/`](./multivariate_mi_analysis/): Multivariate MI analysis and entropy calculations
 - [`output/`](./output/): Output files, images, and analysis results
@@ -36,9 +17,7 @@ multivariate_ptms_analysis/
 - [`ptms_predictions/`](./ptms_predictions/): PTM prediction using XGBoost and OMP
 - [`main.py`](./main.py): Main pipeline orchestrator
 
-</details>
-
----
+--
 
 ## Pipeline Overview
 
