@@ -121,17 +121,6 @@ python multivariate_mi_analysis/bin_num_based_entropy_calculation.py -o human ye
 
 ---
 
-## Key Features
-
-- **Multi-organism Support:** Analyze both human and yeast data
-- **Parallel Processing:** Optimized for multi-core systems
-- **Memory Efficient:** Smart memory management for large datasets
-- **Modular Design:** Run components independently or as a pipeline
-- **Comprehensive Output:** Results, visualizations, and performance metrics
-- **Robust Error Handling:** Detailed logging and troubleshooting
-
----
-
 ## Output Structure
 
 Results are organized in the [`output/`](./output/) directory:
