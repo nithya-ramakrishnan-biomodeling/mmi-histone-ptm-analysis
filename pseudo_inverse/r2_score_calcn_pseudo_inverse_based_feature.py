@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# filepath: c:\Users\dhana\OneDrive\Documents\multivariate_ptms_analysis-\pseudo_inverse\r2_score_calcn_pseudo_inverse_based_feature.py
 """
 Pseudo-Inverse Feature Selection and R² Calculation
 

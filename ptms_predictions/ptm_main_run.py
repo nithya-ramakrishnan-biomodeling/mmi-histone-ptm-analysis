@@ -53,83 +53,83 @@ def run_command(command, description=None):
         return False
 
 
-# ===== First: Run 3MMI Feature Extractor =====
-print("\n=== Running 3MMI Feature Extractor ===")
-for organism in organism_list:
-    for operator in operator_list:
-        if operator in cutoff_dict_all[organism]:
-            description = f"3MMI Feature extraction for organism: {organism}, operator: {operator}"
+# # ===== First: Run 3MMI Feature Extractor =====
+# print("\n=== Running 3MMI Feature Extractor ===")
+# for organism in organism_list:
+#     for operator in operator_list:
+#         if operator in cutoff_dict_all[organism]:
+#             description = f"3MMI Feature extraction for organism: {organism}, operator: {operator}"
             
-            command = [
-                "python",
-                os.path.join(project_dir_name, "3mmi_feature_extractor_with_mmicutoff.py"),  # Fixed typo
-                "-o", organism,
-                "-op", operator
-            ]
+#             command = [
+#                 "python",
+#                 os.path.join(project_dir_name, "3mmi_feature_extractor_with_mmicutoff.py"),  # Fixed typo
+#                 "-o", organism,
+#                 "-op", operator
+#             ]
             
-            run_command(command, description)
+#             run_command(command, description)
 
 
-# ===== MMI Features Script =====
-print("\n=== Running MMI Features Prediction ===")
-for organism in organism_list:
-    for operator in operator_list:
-        if operator in cutoff_dict_all[organism]:
-            for cutoff in cutoff_dict_all[organism][operator]:
-                description = f"MMI Features prediction for organism: {organism}, cutoff: {cutoff}, operator: {operator}"
+# # ===== MMI Features Script =====
+# print("\n=== Running MMI Features Prediction ===")
+# for organism in organism_list:
+#     for operator in operator_list:
+#         if operator in cutoff_dict_all[organism]:
+#             for cutoff in cutoff_dict_all[organism][operator]:
+#                 description = f"MMI Features prediction for organism: {organism}, cutoff: {cutoff}, operator: {operator}"
 
-                command = [
-                    "python",
-                    os.path.join(project_dir_name, "r2_prediction_mmi_features.py"),
-                    "-o", organism,
-                    "-c", cutoff,
-                    "-op", operator,
-                ]
+#                 command = [
+#                     "python",
+#                     os.path.join(project_dir_name, "r2_prediction_mmi_features.py"),
+#                     "-o", organism,
+#                     "-c", cutoff,
+#                     "-op", operator,
+#                 ]
                 
-                # Add parallel flag if parallel mode is enabled
-                if parallel_mode:
-                    command.append("-p")
+#                 # Add parallel flag if parallel mode is enabled
+#                 if parallel_mode:
+#                     command.append("-p")
 
-                run_command(command, description)
+#                 run_command(command, description)
 
-# ===== MMI and Highest Correlation Script =====
-print("\n=== Running MMI and Highest Correlation Prediction ===")
-for organism in organism_list:
-    for operator in operator_list:
-        if operator in cutoff_dict_all[organism]:
-            for cutoff in cutoff_dict_all[organism][operator]:
-                description = f"MMI and Highest Correlation prediction for organism: {organism}, cutoff: {cutoff}, operator: {operator}"
+# # ===== MMI and Highest Correlation Script =====
+# print("\n=== Running MMI and Highest Correlation Prediction ===")
+# for organism in organism_list:
+#     for operator in operator_list:
+#         if operator in cutoff_dict_all[organism]:
+#             for cutoff in cutoff_dict_all[organism][operator]:
+#                 description = f"MMI and Highest Correlation prediction for organism: {organism}, cutoff: {cutoff}, operator: {operator}"
 
-                command = [
-                    "python",
-                    os.path.join(project_dir_name, "r2_prediction_mmi_and_highest_corr.py"),  # Fixed typo
-                    "-o", organism,
-                    "-c", cutoff,
-                    "-op", operator,
-                ]
+#                 command = [
+#                     "python",
+#                     os.path.join(project_dir_name, "r2_prediction_mmi_and_highest_corr.py"),  # Fixed typo
+#                     "-o", organism,
+#                     "-c", cutoff,
+#                     "-op", operator,
+#                 ]
                 
-                # Add parallel flag if parallel mode is enabled
-                if parallel_mode:
-                    command.append("-p")
+#                 # Add parallel flag if parallel mode is enabled
+#                 if parallel_mode:
+#                     command.append("-p")
 
-                run_command(command, description)
+#                 run_command(command, description)
 
-# ===== All Remaining Features Script =====
-print("\n=== Running All Remaining Features Prediction ===")
-for organism in organism_list:
-    description = f"All remaining features prediction for organism: {organism}"
+# # ===== All Remaining Features Script =====
+# print("\n=== Running All Remaining Features Prediction ===")
+# for organism in organism_list:
+#     description = f"All remaining features prediction for organism: {organism}"
 
-    command = [
-        "python",
-        os.path.join(project_dir_name, "r2_prediction_all_remain_features.py"),
-        "-o", organism,
-    ]
+#     command = [
+#         "python",
+#         os.path.join(project_dir_name, "r2_prediction_all_remain_features.py"),
+#         "-o", organism,
+#     ]
     
-    # Add parallel flag if parallel mode is enabled
-    if parallel_mode:
-        command.append("-p")
+#     # Add parallel flag if parallel mode is enabled
+#     if parallel_mode:
+#         command.append("-p")
 
-    run_command(command, description)
+#     run_command(command, description)
 
 # ===== PCA Transformed Features Script =====
 print("\n=== Running PCA Transformed Features Prediction ===")
@@ -188,20 +188,21 @@ for organism in organism_list:
 # ===== Individual Cumulative Analysis =====
 print("\n=== Running Individual Cumulative Analysis ===")
 for organism in organism_list:
-    for target in target_histones:
-        description = f"Individual cumulative analysis for organism: {organism}, target: {target}"
+    if organism == "human": 
+        for target in target_histones:
+            description = f"Individual cumulative analysis for organism: {organism}, target: {target}"
 
-        command = [
-            "python",
-            os.path.join(project_dir_name, "r2_prediction_individual_cumulative.py"),  # Fixed typo
-            "-o", organism,
-            "-t", target,
-        ]
-        
-        # Add CPU limit for parallel processing if enabled
-        if parallel_mode:
-            command.extend(["--cpu_limit", "4"])
+            command = [
+                "python",
+                os.path.join(project_dir_name, "r2_prediction_individual_cumulative.py"),  # Fixed typo
+                "-o", organism,
+                "-t", target,
+            ]
+            
+            # Add CPU limit for parallel processing if enabled
+            if parallel_mode:
+                command.extend(["--cpu_limit", "4"])
 
-        run_command(command, description)
+            run_command(command, description)
 
 print("\nAll analyses completed!")

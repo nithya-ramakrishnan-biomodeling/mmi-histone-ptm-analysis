@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# filepath: c:\Users\dhana\OneDrive\Documents\multivariate_ptms_analysis-\pca_analysis\pca_main_run.py
 """
 PCA Analysis Pipeline Runner
 

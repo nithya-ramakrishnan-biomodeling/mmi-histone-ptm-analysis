@@ -1,5 +1,3 @@
-# Modified sections for the individual and cumulative R² calculation logic
-
 import os
 import sys
 import pandas as pd

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# filepath: c:\Users\dhana\OneDrive\Documents\multivariate_ptms_analysis-\mi_btw_yhat_and_y\mi_calculation_mmi_feature_cutoffs.py
 """
 Calculate mutual information between predicted and actual values
 using MMI-selected features at specific cutoffs.

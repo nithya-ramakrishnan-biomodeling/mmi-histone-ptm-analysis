@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# filepath: c:\Users\dhana\OneDrive\Documents\multivariate_ptms_analysis-\pseudo_inverse\pseudo_invrs_main_run.py
 """
 Pseudo-Inverse Analysis Pipeline
 

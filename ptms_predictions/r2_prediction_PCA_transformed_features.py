@@ -127,7 +127,7 @@ def run_predictions(
 
 if __name__ == "__main__":
     # Define input file paths
-    histone_file = f"histone_{method}_with_eig_trasf_features.csv"
+    histone_file = f"histone_{method}_with_eig_transf_features.csv"
     histone_mod_file_path = os.path.join(
         ProjectPaths.get_output_files_dir(), "pca", organism, histone_file
     )

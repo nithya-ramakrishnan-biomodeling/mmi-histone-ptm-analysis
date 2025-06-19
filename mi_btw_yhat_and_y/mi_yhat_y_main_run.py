@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# filepath: c:\Users\dhana\OneDrive\Documents\multivariate_ptms_analysis-\mi_btw_yhat_and_y\mi_yhat_y_main_run.py
 """
 Mutual Information Between Predicted and Actual Values - Main Runner
 

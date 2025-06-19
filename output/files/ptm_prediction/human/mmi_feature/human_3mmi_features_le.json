@@ -1,27 +1,27 @@
 {
     "-0.6": [
-        "H3K18ac",
-        "H3K4me1",
         "H4K20me1",
-        "H2BK5me1",
-        "H4K91ac",
         "H3K4me2",
-        "H3K4me3",
-        "H3K27ac",
         "H4K12ac",
-        "H3K9me1"
+        "H3K27ac",
+        "H4K91ac",
+        "H3K4me3",
+        "H2BK5me1",
+        "H3K9me1",
+        "H3K18ac",
+        "H3K4me1"
     ],
     "-0.7": [
-        "H3K4me1",
         "H4K20me1",
-        "H4K91ac",
-        "H3K4me3",
         "H3K4me2",
-        "H3K9me1"
+        "H3K4me3",
+        "H3K9me1",
+        "H3K4me1",
+        "H4K91ac"
     ],
     "-0.9": [
-        "H3K4me1",
+        "H3K4me3",
         "H3K4me2",
-        "H3K4me3"
+        "H3K4me1"
     ]
 }
