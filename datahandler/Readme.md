@@ -7,4 +7,3 @@
   - [dir_handler.py](./dir_handler.py)  - Python script for handling directory operations
   - [plotter.py](./plotter.py)  - Python script for plotting data
   - [Readme.md](./Readme.md)  - Readme file for the datahandler directory
-  - [setup.py](./setup.py)  - Python script for setting up the environment or package
