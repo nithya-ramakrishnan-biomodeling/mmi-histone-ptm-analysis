@@ -107,6 +107,8 @@ large_neg_three_mi_df = data_handler.csv_loader(large_neg_three_mi_file)
 # Get the correlation dataframe and mask diagonal elements
 corr_df = histone_mod_df.corr().abs()
 masked_corr_df = corr_df.where(~np.eye(corr_df.shape[0], dtype=bool))
+
+
 # Standard function to use in all files
 def json_file_saver(data_dict: dict, absolute_file_name: str):
     """Save dictionary to JSON file with pretty formatting
@@ -120,6 +122,8 @@ def json_file_saver(data_dict: dict, absolute_file_name: str):
     """
     with open(absolute_file_name, "w") as json_file:
         json.dump(data_dict, json_file, indent=4)
+
+
 # Filter the dataframe with the specified cut-off value
 filetered_df = data_manipulator.filter_dataframe(
     df=large_neg_three_mi_df,
@@ -158,7 +162,9 @@ max_target_histone_corr_feature_file_path = os.path.join(
     output_dir_full_path,
     f"{organism}_mmi_and_highest_corr_cutoff_{cut_off_value}_target_max_corr.json",
 )
-json_file_saver(max_target_histone_corr_feature, max_target_histone_corr_feature_file_path)
+json_file_saver(
+    max_target_histone_corr_feature, max_target_histone_corr_feature_file_path
+)
 
 # Create a dictionary for feature and target histones
 feature_target_dict = {
@@ -176,6 +182,7 @@ feature_target_file_path = os.path.join(
 # Initialize the results dictionary
 target_r2 = {}
 
+
 # Define a function to process each target
 def process_target(feature_, target_):
     updated_feature = list(feature_data_df.columns)
@@ -189,6 +196,7 @@ def process_target(feature_, target_):
     score = regressor_predictor.error_calculator().round(2)
     print(f"Target: {target_}  R2 score: {score}")
     return target_, score
+
 
 # Choose between parallel and sequential processing
 print(f"Processing in {'parallel' if parallel_mode else 'sequential'} mode")
@@ -216,8 +224,7 @@ sorted_target_r2 = dict(sorted(target_r2.items(), key=lambda x: x[1], reverse=Tr
 mode_suffix = "parallel" if parallel_mode else "sequential"
 # For MMI and highest correlation script
 output_r2_file_path = os.path.join(
-    output_dir_full_path,
-    f"{organism}_mmi_highest_corr_cutoff_{cut_off_value}_r2.json"
+    output_dir_full_path, f"{organism}_mmi_highest_corr_cutoff_{cut_off_value}_r2.json"
 )
 
 json_file_saver(sorted_target_r2, output_r2_file_path)

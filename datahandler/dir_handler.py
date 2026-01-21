@@ -11,7 +11,7 @@ def dir_maker(full_path: str) -> None:
     ----------
     full_path : str
         Absolute path of the new directory.
-        
+
     Raises
     ----
     OSError
@@ -21,7 +21,7 @@ def dir_maker(full_path: str) -> None:
     """
     if not full_path:
         raise ValueError("Directory path cannot be empty or None")
-    
+
     try:
         # Clean the path to handle any path inconsistencies
         clean_path = os.path.normpath(full_path)
@@ -48,7 +48,7 @@ def dir_path_generator(cur_dir: str, backstep_num: int) -> str:
     -------
     str
         Main directory path
-        
+
     Raises
     ------
     ValueError
@@ -58,20 +58,20 @@ def dir_path_generator(cur_dir: str, backstep_num: int) -> str:
     """
     if backstep_num < 0:
         raise ValueError("backstep_num must be a non-negative integer")
-    
+
     if not cur_dir or not os.path.exists(cur_dir):
         raise ValueError(f"Current directory path is invalid: {cur_dir}")
-    
+
     try:
         no_of_steps = [".."] * backstep_num
         main_dir = os.path.abspath(os.path.join(cur_dir, *no_of_steps))
-        
+
         # Normalize the path for consistency
         main_dir = os.path.normpath(main_dir)
-        
+
         if not os.path.exists(main_dir):
             raise OSError(f"Generated path does not exist: {main_dir}")
-        
+
         return main_dir
     except Exception as e:
         raise Exception(f"Error generating directory path: {str(e)}")
@@ -79,12 +79,12 @@ def dir_path_generator(cur_dir: str, backstep_num: int) -> str:
 
 def ensure_dir_exists(directory_path: str) -> bool:
     """Check if directory exists and create it if it doesn't.
-    
+
     Parameters
     ----------
     directory_path : str
         Path to directory to check/create
-        
+
     Returns
     -------
     bool
@@ -101,14 +101,14 @@ def ensure_dir_exists(directory_path: str) -> bool:
 
 def safe_remove_dir(directory_path: str, force: bool = False) -> bool:
     """Safely remove a directory and all its contents.
-    
+
     Parameters
     ----------
     directory_path : str
         Path to directory to remove
     force : bool, optional
         If True, remove even if directory is not empty, by default False
-        
+
     Returns
     -------
     bool
@@ -118,7 +118,7 @@ def safe_remove_dir(directory_path: str, force: bool = False) -> bool:
         if not os.path.exists(directory_path):
             print(f"Directory does not exist: {directory_path}")
             return True
-        
+
         if force:
             shutil.rmtree(directory_path)
             print(f"Directory forcefully removed: {directory_path}")
@@ -134,12 +134,12 @@ def safe_remove_dir(directory_path: str, force: bool = False) -> bool:
 
 def list_subdirectories(parent_dir: str) -> List[str]:
     """List all subdirectories in a given directory.
-    
+
     Parameters
     ----------
     parent_dir : str
         Path to parent directory
-        
+
     Returns
     -------
     List[str]
@@ -148,7 +148,7 @@ def list_subdirectories(parent_dir: str) -> List[str]:
     try:
         if not os.path.exists(parent_dir):
             return []
-        
+
         subdirs = []
         for item in os.listdir(parent_dir):
             item_path = os.path.join(parent_dir, item)
@@ -161,12 +161,12 @@ def list_subdirectories(parent_dir: str) -> List[str]:
 
 def get_directory_size(directory_path: str) -> int:
     """Get the total size of a directory in bytes.
-    
+
     Parameters
     ----------
     directory_path : str
         Path to directory
-        
+
     Returns
     -------
     int
@@ -175,7 +175,7 @@ def get_directory_size(directory_path: str) -> int:
     try:
         if not os.path.exists(directory_path):
             return 0
-        
+
         total_size = 0
         for dirpath, dirnames, filenames in os.walk(directory_path):
             for filename in filenames:
@@ -191,12 +191,12 @@ def get_directory_size(directory_path: str) -> int:
 
 def clean_empty_directories(root_dir: str) -> int:
     """Remove all empty directories within a root directory.
-    
+
     Parameters
     ----------
     root_dir : str
         Root directory to clean
-        
+
     Returns
     -------
     int
@@ -204,7 +204,7 @@ def clean_empty_directories(root_dir: str) -> int:
     """
     if not os.path.exists(root_dir):
         return 0
-    
+
     removed_count = 0
     try:
         # Walk from bottom up to handle nested empty directories
@@ -223,12 +223,12 @@ def clean_empty_directories(root_dir: str) -> int:
 
 def validate_path(path: str) -> bool:
     """Validate if a path is valid for the current operating system.
-    
+
     Parameters
     ----------
     path : str
         Path to validate
-        
+
     Returns
     -------
     bool
@@ -244,14 +244,14 @@ def validate_path(path: str) -> bool:
 
 def create_directory_structure(base_path: str, structure: dict) -> bool:
     """Create a nested directory structure from a dictionary.
-    
+
     Parameters
     ----------
     base_path : str
         Base directory path
     structure : dict
         Dictionary representing directory structure
-        
+
     Example
     -------
     structure = {
@@ -264,20 +264,21 @@ def create_directory_structure(base_path: str, structure: dict) -> bool:
             'files': {}
         }
     }
-    
+
     Returns
     -------
     bool
         True if all directories were created successfully
     """
     try:
+
         def create_dirs(current_path: str, current_structure: dict):
             for name, subdirs in current_structure.items():
                 new_path = os.path.join(current_path, name)
                 dir_maker(new_path)
                 if isinstance(subdirs, dict) and subdirs:
                     create_dirs(new_path, subdirs)
-        
+
         create_dirs(base_path, structure)
         return True
     except Exception as e:

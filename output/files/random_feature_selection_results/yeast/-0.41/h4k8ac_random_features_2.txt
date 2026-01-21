@@ -1,0 +1,6 @@
+H3K79me
+H3K4me3
+H3K36me2
+H4K20me
+Htz1
+H3K4ac

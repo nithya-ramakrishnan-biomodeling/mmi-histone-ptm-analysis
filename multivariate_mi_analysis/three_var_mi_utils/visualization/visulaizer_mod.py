@@ -65,7 +65,7 @@ def three_var_filtrd_mi_visualizer(
     heatmap = sns.heatmap(
         df.values,
         annot=True,  # Show values in cells
-        cmap=cbar,    # Use the cbar parameter for colormap
+        cmap=cbar,  # Use the cbar parameter for colormap
         xticklabels=df.columns,
         yticklabels=df.index,
         ax=ax,
@@ -74,11 +74,11 @@ def three_var_filtrd_mi_visualizer(
         # linewidths=2,  # Thickness of cell borders
         # square=True,  # Ensure square cells
     )
-    
+
     # Set up colorbar with proper dimensions - FIXED: Get colorbar from heatmap
     divider = make_axes_locatable(ax)
     cax = divider.append_axes("right", size="3%", pad=0.1)
-    
+
     # FIXED: Get the mappable from the heatmap collections
     cbar_obj = plt.colorbar(heatmap.collections[0], cax=cax, aspect=30)
 

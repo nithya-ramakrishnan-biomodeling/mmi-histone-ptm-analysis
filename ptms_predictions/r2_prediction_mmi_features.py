@@ -47,7 +47,9 @@ python r2_prediction_mmi_features.py -o human -c -0.5 -op "le" -p
 """
 
 # Define the argument parser
-parser = argparse.ArgumentParser(description="MMI-based histone modification prediction")
+parser = argparse.ArgumentParser(
+    description="MMI-based histone modification prediction"
+)
 
 # Add the arguments (with short and long names)
 parser.add_argument(
@@ -105,12 +107,13 @@ histone_mod_file_path = os.path.join(cleaned_dir, organism, f"{organism}_zero_me
 
 # Path to 3MMI features file - corrected name
 mmi_features_path = os.path.join(
-    ProjectPaths.get_output_files_dir(), 
-    dir_name, 
-    organism, 
-    mmi_feature_dir, 
-    f"{organism}_3mmi_features_{operator_value}.json"  # Standardized naming
+    ProjectPaths.get_output_files_dir(),
+    dir_name,
+    organism,
+    mmi_feature_dir,
+    f"{organism}_3mmi_features_{operator_value}.json",  # Standardized naming
 )
+
 
 # Standard function to use in all files
 def json_file_saver(data_dict: dict, absolute_file_name: str):
@@ -125,6 +128,8 @@ def json_file_saver(data_dict: dict, absolute_file_name: str):
     """
     with open(absolute_file_name, "w") as json_file:
         json.dump(data_dict, json_file, indent=4)
+
+
 # Load data
 print(f"Loading data for organism {organism}")
 histone_mod_df = data_handler.csv_loader(histone_mod_file_path)
@@ -133,7 +138,7 @@ histone_mod_df = data_handler.csv_loader(histone_mod_file_path)
 print(f"Loading 3MMI features from {mmi_features_path}")
 try:
     mmi_features_dict = data_handler.json_file_loader(mmi_features_path)
-    
+
     # Get features for the specified cutoff
     cut_off_str = str(cut_off_value)
     if cut_off_str not in mmi_features_dict:
@@ -141,13 +146,15 @@ try:
         print(f"Available cutoffs: {list(mmi_features_dict.keys())}")
         print(f"Using closest available cutoff")
         # Find closest available cutoff
-        closest = min(mmi_features_dict.keys(), key=lambda x: abs(float(x) - cut_off_value))
+        closest = min(
+            mmi_features_dict.keys(), key=lambda x: abs(float(x) - cut_off_value)
+        )
         print(f"Selected cutoff: {closest}")
         cut_off_str = closest
-        
+
     large_neg_histone_mods = mmi_features_dict[cut_off_str]
     print(f"Found {len(large_neg_histone_mods)} features for cutoff {cut_off_str}")
-    
+
 except Exception as e:
     print(f"Error loading 3MMI features: {e}")
     print("Make sure to run 3mmi_feature_exratcor_with_mmicutoff.py first")
@@ -177,6 +184,7 @@ print(f"Feature-target pairs saved to {feature_target_file_path}")
 
 # Initialize the results dictionary
 target_r2 = {}
+
 
 # Define a function to process each target
 def process_target(target_):
@@ -214,7 +222,7 @@ sorted_target_r2 = dict(sorted(target_r2.items(), key=lambda x: x[1], reverse=Tr
 # Generate filename with standardized naming convention including operator
 output_r2_file_path = os.path.join(
     output_dir_full_path,
-    f"{organism}_mmi_cutoff_{cut_off_str}_{operator_value}_r2.json"
+    f"{organism}_mmi_cutoff_{cut_off_str}_{operator_value}_r2.json",
 )
 json_file_saver(sorted_target_r2, output_r2_file_path)
 print(f"Results saved to {output_r2_file_path}")

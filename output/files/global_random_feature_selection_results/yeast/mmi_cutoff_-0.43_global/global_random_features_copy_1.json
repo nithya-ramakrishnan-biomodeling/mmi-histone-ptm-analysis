@@ -1,0 +1,20 @@
+{
+    "copy_number": 1,
+    "mmi_cutoff": "-0.43",
+    "organism": "yeast",
+    "num_features_selected": 11,
+    "random_seed": -387,
+    "features": [
+        "H3K18ac",
+        "H3K27ac",
+        "H3K4ac",
+        "H3K4me3",
+        "H3K9ac",
+        "H4K12ac",
+        "H4K16ac",
+        "H4K20me",
+        "H4K5ac",
+        "H4K8ac",
+        "H4R3me"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "organism": "human",
+    "total_features": 39,
+    "total_triplets": 13,
+    "all_features_covered": true,
+    "features_covered_count": 39,
+    "triplets": [
+        {
+            "triplet_id": 1,
+            "feature1": "H2AK5ac",
+            "feature2": "H2BK12ac",
+            "feature3": "H3K4me2"
+        },
+        {
+            "triplet_id": 2,
+            "feature1": "H3K36me3",
+            "feature2": "H4K12ac",
+            "feature3": "H3K27ac"
+        },
+        {
+            "triplet_id": 3,
+            "feature1": "H3K9me1",
+            "feature2": "H3K36ac",
+            "feature3": "H3K18ac"
+        },
+        {
+            "triplet_id": 4,
+            "feature1": "H3K79me2",
+            "feature2": "H3R2me1",
+            "feature3": "H3K9me3"
+        },
+        {
+            "triplet_id": 5,
+            "feature1": "H3K79me3",
+            "feature2": "H3K36me1",
+            "feature3": "H4K20me1"
+        },
+        {
+            "triplet_id": 6,
+            "feature1": "H3K27me1",
+            "feature2": "H4K91ac",
+            "feature3": "H2A.H4R3me2"
+        },
+        {
+            "triplet_id": 7,
+            "feature1": "H3K23ac",
+            "feature2": "H3K4me3",
+            "feature3": "H3K27me3"
+        },
+        {
+            "triplet_id": 8,
+            "feature1": "H2AZ",
+            "feature2": "H2BK20ac",
+            "feature3": "H3K4ac"
+        },
+        {
+            "triplet_id": 9,
+            "feature1": "H2BK5me1",
+            "feature2": "H4K8ac",
+            "feature3": "H2BK5ac"
+        },
+        {
+            "triplet_id": 10,
+            "feature1": "H3K4me1",
+            "feature2": "H2AK9ac",
+            "feature3": "H3K14ac"
+        },
+        {
+            "triplet_id": 11,
+            "feature1": "H4K16ac",
+            "feature2": "H3K27me2",
+            "feature3": "H3K9ac"
+        },
+        {
+            "triplet_id": 12,
+            "feature1": "H3R2me2",
+            "feature2": "H4K20me3",
+            "feature3": "H3K9me2"
+        },
+        {
+            "triplet_id": 13,
+            "feature1": "H3K79me1",
+            "feature2": "H4K5ac",
+            "feature3": "H2BK120ac"
+        }
+    ]
+}

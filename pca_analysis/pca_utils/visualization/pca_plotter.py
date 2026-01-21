@@ -8,6 +8,7 @@ from typing import Union, Sequence
 
 Arraylike = Union[Sequence, pd.Series]
 
+
 def plot_mod(
     ax,
     x_label: str = None,
@@ -71,6 +72,7 @@ def plot_mod(
         ax.set_xticklabels(x_tick_label)
     if y_tick_label is not None:
         ax.set_yticklabels(y_tick_label)
+
 
 def scatter_plot_gen(
     x_value: Arraylike,

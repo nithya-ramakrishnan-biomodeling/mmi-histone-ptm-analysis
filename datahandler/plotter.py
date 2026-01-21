@@ -19,7 +19,6 @@ font_dictionary_ticks = {"family": "serif", "size": "11", "color": "black"}
 # plt.rc("font", family="arial")
 
 
-
 def create_custom_colormap(name, colors):
     """
     Create a custom colormap.
@@ -33,8 +32,10 @@ def create_custom_colormap(name, colors):
     """
     return LinearSegmentedColormap.from_list(name, colors)
 
+
 # Example usage
 # custom_map = create_custom_colormap("custom_map", ["#964d18", "white", "#1d6f59"])
+
 
 def plot_mod(
     ax,

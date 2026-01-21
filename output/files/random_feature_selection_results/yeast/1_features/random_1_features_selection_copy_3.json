@@ -1,0 +1,80 @@
+{
+    "H3K79me3": [
+        "H3S10ph"
+    ],
+    "H4R3me2s": [
+        "H3K14ac"
+    ],
+    "H3K4me": [
+        "H4K16ac"
+    ],
+    "H2AS129ph": [
+        "H4K12ac"
+    ],
+    "H3K14ac": [
+        "H3K36me"
+    ],
+    "H4K12ac": [
+        "H3K56ac"
+    ],
+    "H3K23ac": [
+        "H3K14ac"
+    ],
+    "H3K36me2": [
+        "H4K8ac"
+    ],
+    "H3K36me3": [
+        "H3K18ac"
+    ],
+    "H3K4me3": [
+        "Htz1"
+    ],
+    "H4K8ac": [
+        "H3K36me2"
+    ],
+    "H2AK5ac": [
+        "H3K79me"
+    ],
+    "H3K56ac": [
+        "H4K16ac"
+    ],
+    "H3K79me": [
+        "H3K9ac"
+    ],
+    "H3K4ac": [
+        "H3K14ac"
+    ],
+    "H3K27ac": [
+        "H4K20me"
+    ],
+    "H4K16ac": [
+        "H3K36me3"
+    ],
+    "H4K20me": [
+        "H3K79me3"
+    ],
+    "H4K5ac": [
+        "H3K4me2"
+    ],
+    "H3K18ac": [
+        "H4R3me"
+    ],
+    "H3K9ac": [
+        "H3K36me3"
+    ],
+    "H3K36me": [
+        "H3K56ac"
+    ],
+    "Htz1": [
+        "H4K20me"
+    ],
+    "H4R3me": [
+        "Htz1"
+    ],
+    "H3K4me2": [
+        "H4K20me"
+    ],
+    "H3S10ph": [
+        "H3K4me3"
+    ]
+}

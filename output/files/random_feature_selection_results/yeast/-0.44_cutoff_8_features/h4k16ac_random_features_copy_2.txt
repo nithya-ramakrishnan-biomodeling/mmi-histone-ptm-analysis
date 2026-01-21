@@ -1,0 +1,8 @@
+H3K4ac
+H3K9ac
+H3K18ac
+H3K14ac
+H3K4me
+Htz1
+H3S10ph
+H2AS129ph

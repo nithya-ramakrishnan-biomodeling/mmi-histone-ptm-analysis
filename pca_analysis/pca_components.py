@@ -11,8 +11,12 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--organism", type=str, default="human", help="The organism")
-parser.add_argument("-m", "--method", type=str, default="cov", choices=["cov", "mi"], help="PCA method")
-parser.add_argument("-n", "--n_components", type=int, default=5, help="Number of components")
+parser.add_argument(
+    "-m", "--method", type=str, default="cov", choices=["cov", "mi"], help="PCA method"
+)
+parser.add_argument(
+    "-n", "--n_components", type=int, default=5, help="Number of components"
+)
 args = parser.parse_args()
 
 organism = args.organism
@@ -58,10 +62,11 @@ print(f"The shape of the eigen vectors is: {cov_pca_eig_vec.shape}")
 transformed_data = pca.fit_transform()
 print(f" The shape of the transformed data is: {transformed_data.shape}")
 
+# transformed colomns
+columns = [f"v{i+1}" for i in range(n_components)]
+
 # transformed dataframe
-transformed_histone_df = pd.DataFrame(
-    transformed_data, columns=["v1", "v2", "v3", "v4", "v5"]
-)
+transformed_histone_df = pd.DataFrame(transformed_data, columns=columns)
 print(transformed_histone_df)
 
 # creating the new data with new additional modifications
@@ -73,6 +78,6 @@ output_file_path = os.path.join(
     ProjectPaths.get_output_files_dir(),
     out_folder_name,
     organism,
-    f"histone_{method}_with_eig_transf_features.csv",
+    f"histone_{method}_with_eig_transf_{n_components}_features.csv",
 )
 new_histone_df.to_csv(output_file_path)

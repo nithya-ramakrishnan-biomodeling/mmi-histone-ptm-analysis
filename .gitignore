@@ -53,6 +53,16 @@ output/files/pca/human/histone_cov_with_eig_transf_features.csv
 output/files/pca/human/histone_mi_with_eig_transf_features.csv
 output/files/pca/yeast/histone_cov_with_eig_transf_features.csv
 output/files/pca/yeast/histone_mi_with_eig_transf_features.csv
+output/files/pca/human/histone_cov_with_eig_transf_10_features.csv
+output/files/pca/human/histone_cov_with_eig_transf_5_features.csv
+output/files/pca/human/histone_mi_with_eig_transf_10_features.csv
+output/files/pca/human/histone_mi_with_eig_transf_5_features.csv
+output/files/pca/yeast/histone_cov_with_eig_transf_10_features.csv
+output/files/pca/yeast/histone_cov_with_eig_transf_5_features.csv
+output/files/pca/yeast/histone_mi_with_eig_transf_10_features.csv
+output/files/pca/yeast/histone_mi_with_eig_transf_5_features.csv
+
+output/entropy_mi_results/
 
 # General output and results
 output/images/

@@ -1,0 +1,109 @@
+{
+    "organism": "human",
+    "total_features": 39,
+    "total_pairs": 20,
+    "all_features_covered": true,
+    "features_covered_count": 39,
+    "pairs": [
+        {
+            "pair_id": 1,
+            "feature1": "H2AK5ac",
+            "feature2": "H2BK12ac"
+        },
+        {
+            "pair_id": 2,
+            "feature1": "H3K4me2",
+            "feature2": "H3K36me3"
+        },
+        {
+            "pair_id": 3,
+            "feature1": "H4K12ac",
+            "feature2": "H3K27ac"
+        },
+        {
+            "pair_id": 4,
+            "feature1": "H3K9me1",
+            "feature2": "H3K36ac"
+        },
+        {
+            "pair_id": 5,
+            "feature1": "H3K18ac",
+            "feature2": "H3K79me2"
+        },
+        {
+            "pair_id": 6,
+            "feature1": "H3R2me1",
+            "feature2": "H3K9me3"
+        },
+        {
+            "pair_id": 7,
+            "feature1": "H3K79me3",
+            "feature2": "H3K36me1"
+        },
+        {
+            "pair_id": 8,
+            "feature1": "H4K20me1",
+            "feature2": "H3K27me1"
+        },
+        {
+            "pair_id": 9,
+            "feature1": "H4K91ac",
+            "feature2": "H2A.H4R3me2"
+        },
+        {
+            "pair_id": 10,
+            "feature1": "H3K23ac",
+            "feature2": "H3K4me3"
+        },
+        {
+            "pair_id": 11,
+            "feature1": "H3K27me3",
+            "feature2": "H2AZ"
+        },
+        {
+            "pair_id": 12,
+            "feature1": "H2BK20ac",
+            "feature2": "H3K4ac"
+        },
+        {
+            "pair_id": 13,
+            "feature1": "H2BK5me1",
+            "feature2": "H4K8ac"
+        },
+        {
+            "pair_id": 14,
+            "feature1": "H2BK5ac",
+            "feature2": "H3K4me1"
+        },
+        {
+            "pair_id": 15,
+            "feature1": "H2AK9ac",
+            "feature2": "H3K14ac"
+        },
+        {
+            "pair_id": 16,
+            "feature1": "H4K16ac",
+            "feature2": "H3K27me2"
+        },
+        {
+            "pair_id": 17,
+            "feature1": "H3K9ac",
+            "feature2": "H3R2me2"
+        },
+        {
+            "pair_id": 18,
+            "feature1": "H4K20me3",
+            "feature2": "H3K9me2"
+        },
+        {
+            "pair_id": 19,
+            "feature1": "H3K79me1",
+            "feature2": "H4K5ac"
+        },
+        {
+            "pair_id": 20,
+            "feature1": "H2BK120ac",
+            "feature2": "H3K9me1"
+        }
+    ]
+}

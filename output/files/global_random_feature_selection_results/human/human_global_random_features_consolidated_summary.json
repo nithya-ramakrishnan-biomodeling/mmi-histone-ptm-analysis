@@ -1,0 +1,95 @@
+{
+    "-0.6": {
+        "organism": "human",
+        "mmi_cutoff": "-0.6",
+        "total_available_features": 39,
+        "features_selected_per_copy": 10,
+        "num_copies": 3,
+        "output_directory": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global",
+        "copies": [
+            {
+                "copy_number": 1,
+                "num_features": 10,
+                "random_seed": -557,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_1.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_1.json"
+            },
+            {
+                "copy_number": 2,
+                "num_features": 10,
+                "random_seed": -556,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_2.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_2.json"
+            },
+            {
+                "copy_number": 3,
+                "num_features": 10,
+                "random_seed": -555,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_3.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.6_global\\global_random_features_copy_3.json"
+            }
+        ]
+    },
+    "-0.7": {
+        "organism": "human",
+        "mmi_cutoff": "-0.7",
+        "total_available_features": 39,
+        "features_selected_per_copy": 6,
+        "num_copies": 3,
+        "output_directory": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global",
+        "copies": [
+            {
+                "copy_number": 1,
+                "num_features": 6,
+                "random_seed": -657,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_1.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_1.json"
+            },
+            {
+                "copy_number": 2,
+                "num_features": 6,
+                "random_seed": -656,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_2.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_2.json"
+            },
+            {
+                "copy_number": 3,
+                "num_features": 6,
+                "random_seed": -655,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_3.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.7_global\\global_random_features_copy_3.json"
+            }
+        ]
+    },
+    "-0.9": {
+        "organism": "human",
+        "mmi_cutoff": "-0.9",
+        "total_available_features": 39,
+        "features_selected_per_copy": 3,
+        "num_copies": 3,
+        "output_directory": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global",
+        "copies": [
+            {
+                "copy_number": 1,
+                "num_features": 3,
+                "random_seed": -857,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_1.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_1.json"
+            },
+            {
+                "copy_number": 2,
+                "num_features": 3,
+                "random_seed": -856,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_2.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_2.json"
+            },
+            {
+                "copy_number": 3,
+                "num_features": 3,
+                "random_seed": -855,
+                "output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_3.txt",
+                "json_output_file": "C:\\Users\\dhana\\OneDrive\\Documents\\multivariate_ptms_analysis-\\output\\files\\global_random_feature_selection_results\\human\\mmi_cutoff_-0.9_global\\global_random_features_copy_3.json"
+            }
+        ]
+    }
+}

@@ -5,6 +5,7 @@ This script splits and visualizes three-variable mutual information values based
 user-defined thresholds for human and yeast organisms. It generates heatmaps showing
 relationships between different histone modifications.
 """
+
 import os
 import argparse
 import pandas as pd
@@ -141,7 +142,9 @@ def generate_visualizations(
 
         # Select colormap based on threshold values
         if params["threshold"][1] < 0:
-            color_map = sns.diverging_palette(250, 30, l=65, center="dark", as_cmap=True)
+            color_map = sns.diverging_palette(
+                250, 30, l=65, center="dark", as_cmap=True
+            )
         else:
             color_map = "RdBu_r"
 
@@ -192,7 +195,9 @@ def main():
     print(f"Analyzing organism: {organism}")
 
     # Setup directories
-    cleaned_dir, output_dir, output_file_dir, output_img_dir = setup_directories(organism)
+    cleaned_dir, output_dir, output_file_dir, output_img_dir = setup_directories(
+        organism
+    )
 
     # Load data
     raw_df, three_mi_df, all_permut_df, two_mi_df = load_data_files(

@@ -124,7 +124,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Configure directories
-    out_folder_name = "multivariate analysis"
+    out_folder_name = "multivariate analysis "
     main_dir = ProjectPaths.get_project_root()
     cleaned_dir = ProjectPaths.get_cleaned_data_dir()
     output_file_dir = os.path.join(
@@ -142,6 +142,7 @@ if __name__ == "__main__":
     input_file_path = os.path.join(
         cleaned_dir, args.organism, f"{args.organism}_zero_mean.csv"
     )
+
     histone_df = data_handler.csv_loader(input_file_path)
 
     # Load binning information

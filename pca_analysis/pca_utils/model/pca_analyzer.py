@@ -10,6 +10,7 @@ import os
 from .mi_calculator import mi_betwn_uandy
 from ..visualization.pca_plotter import plot_mod, scatter_plot_gen
 
+
 class PCAanalyzer:
 
     def __init__(
@@ -155,8 +156,8 @@ class PCAanalyzer:
 
         legend = plt.legend()
         legend.get_frame().set_alpha(0.0)  # Make background transparent
-        legend.get_frame().set_facecolor('none')  # Remove face color
-        legend.get_frame().set_edgecolor('none')
+        legend.get_frame().set_facecolor("none")  # Remove face color
+        legend.get_frame().set_edgecolor("none")
         #  Modify font properties after creating the legend
         for text in legend.get_texts():
             text.set_fontsize(14)  # Set font size
@@ -179,17 +180,30 @@ class PCAanalyzer:
             file_name = f"{self.method}_cumulative_{indvid_label}_plot.jpeg"
             file_name_png = f"{self.method}_cumulative_{indvid_label}_plot.png"
             file_name_eps = f"{self.method}_cumulative_{indvid_label}_plot.eps"
-            
+
             # saving Png as transparent
-            
-            plt.savefig(os.path.join(out_dir, file_name), dpi=400, bbox_inches="tight", transparent=True)
-            plt.savefig(os.path.join(out_dir, file_name_eps), dpi=700, bbox_inches="tight", transparent=True)
+
+            plt.savefig(
+                os.path.join(out_dir, file_name),
+                dpi=400,
+                bbox_inches="tight",
+                transparent=True,
+            )
+            plt.savefig(
+                os.path.join(out_dir, file_name_eps),
+                dpi=700,
+                bbox_inches="tight",
+                transparent=True,
+            )
             if file_name_png:
                 # fig.patch.set_alpha(0.0)
                 # fig.patch.set_facecolor("none")
                 # fig.patch.set_edgecolor("none")
                 fig.savefig(
-                    os.path.join(out_dir, file_name_png), dpi=400, bbox_inches="tight", transparent=True
+                    os.path.join(out_dir, file_name_png),
+                    dpi=400,
+                    bbox_inches="tight",
+                    transparent=True,
                 )
 
             plt.close()

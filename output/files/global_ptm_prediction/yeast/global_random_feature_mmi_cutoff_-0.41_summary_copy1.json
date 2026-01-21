@@ -1,0 +1,40 @@
+{
+    "organism": "yeast",
+    "mmi_cutoff": "-0.41",
+    "copy_number": 1,
+    "num_targets": 14,
+    "num_features": 12,
+    "features": [
+        "Htz1",
+        "H3K36me",
+        "H3K4me",
+        "H4K5ac",
+        "H3K79me3",
+        "H3K4me2",
+        "H4R3me2s",
+        "H4K20me",
+        "H2AK5ac",
+        "H2AS129ph",
+        "H3K56ac",
+        "H3K14ac"
+    ],
+    "mean_r2": 0.842,
+    "max_r2": 1.0,
+    "min_r2": 0.126,
+    "results": {
+        "H3K79me3": 1.0,
+        "H2AK5ac": 1.0,
+        "H4K20me": 1.0,
+        "Htz1": 0.999,
+        "H3K56ac": 0.999,
+        "H3K36me": 0.999,
+        "H4K5ac": 0.999,
+        "H3K23ac": 0.91,
+        "H3K9ac": 0.898,
+        "H4K12ac": 0.763,
+        "H3K27ac": 0.739,
+        "H3K79me": 0.709,
+        "H4R3me": 0.641,
+        "H3S10ph": 0.126
+    }
+}

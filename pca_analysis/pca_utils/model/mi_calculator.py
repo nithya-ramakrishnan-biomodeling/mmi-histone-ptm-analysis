@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def bin_gen(iterable, bin_edges):
     """Generates bins and bin indices of the input array.
 
@@ -19,6 +20,7 @@ def bin_gen(iterable, bin_edges):
     binned_indices = np.digitize(iterable, bin_edges) - 1
 
     return binned_indices
+
 
 def joint_prob_two(input_list_1, input_list_2, spaced_bin_edges):
     """Calculate the joint probabilities between two arrays.
@@ -54,6 +56,7 @@ def joint_prob_two(input_list_1, input_list_2, spaced_bin_edges):
 
     return joint_prob
 
+
 def marginal_prob_calculator(joint_prob_value, axis):
     """Calculate the marginal probability from the joint probability.
 
@@ -70,6 +73,7 @@ def marginal_prob_calculator(joint_prob_value, axis):
         Marginal probability array.
     """
     return np.sum(joint_prob_value, axis=axis)
+
 
 def entropy_calculator(array: np.ndarray) -> float:
     """Calculate the entropy of the given probability values.
@@ -90,6 +94,7 @@ def entropy_calculator(array: np.ndarray) -> float:
     without_zero_prob = flatten_prob[flatten_prob > 0]
 
     return -np.sum(without_zero_prob * np.log2(without_zero_prob))
+
 
 def mi_betwn_uandy(arr1: np.array, arr2: np.array, spaced_bin_edges):
     """Calculate the mutual information between two variables U and Y.

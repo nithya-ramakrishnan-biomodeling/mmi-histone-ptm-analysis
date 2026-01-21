@@ -40,7 +40,9 @@ output_img_dir = os.path.join(
 # Create output directories if they don't exist
 dir_handler.dir_maker(output_file_dir)
 dir_handler.dir_maker(output_img_dir)
-input_filepath = input_file_path = os.path.join(cleaned_dir, organism, f"{organism}_zero_mean.csv")
+input_filepath = input_file_path = os.path.join(
+    cleaned_dir, organism, f"{organism}_zero_mean.csv"
+)
 
 # Load the data
 histone_df = data_handler.csv_loader(input_file_path)

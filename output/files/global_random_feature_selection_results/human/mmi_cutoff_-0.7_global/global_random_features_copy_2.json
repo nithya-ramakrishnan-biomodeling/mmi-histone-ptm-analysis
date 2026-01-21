@@ -1,0 +1,15 @@
+{
+    "copy_number": 2,
+    "mmi_cutoff": "-0.7",
+    "organism": "human",
+    "num_features_selected": 6,
+    "random_seed": -656,
+    "features": [
+        "H2AK5ac",
+        "H3K27ac",
+        "H3K36ac",
+        "H3K36me3",
+        "H3K9me1",
+        "H4K12ac"
+    ]
+}

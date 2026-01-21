@@ -9,7 +9,9 @@ import gc
 warnings.filterwarnings("ignore")
 
 
-def csv_loader(file_path: str, reset_indx: bool = True, optimize_memory: bool = True) -> pd.DataFrame:
+def csv_loader(
+    file_path: str, reset_indx: bool = True, optimize_memory: bool = True
+) -> pd.DataFrame:
     """Load the csv file using pandas dataframe utility function.
     It also handles the df columns and index formatting and
     gives the new dataframe.
@@ -27,7 +29,7 @@ def csv_loader(file_path: str, reset_indx: bool = True, optimize_memory: bool = 
     -------
     pd.DataFrame
         New pandas DataFrame.
-        
+
     Raises
     ----
     FileNotFoundError
@@ -38,21 +40,21 @@ def csv_loader(file_path: str, reset_indx: bool = True, optimize_memory: bool = 
     # Check if file exists
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
-    
+
     try:
         # Load CSV with error handling
         raw_df = pd.read_csv(file_path, index_col=0)
-        
+
         if raw_df.empty:
             raise pd.errors.EmptyDataError("CSV file is empty")
-        
+
         # Reset index if requested
         if reset_indx:
             raw_df = raw_df.reset_index(drop=True)  # Fixed: actually reset the index
 
         # Clean column names - remove whitespace and handle duplicates
         new_cols = [str(col).strip() for col in raw_df.columns]
-        
+
         # Handle duplicate column names
         seen_cols = {}
         unique_cols = []
@@ -63,7 +65,7 @@ def csv_loader(file_path: str, reset_indx: bool = True, optimize_memory: bool = 
             else:
                 seen_cols[col] = 0
                 unique_cols.append(col)
-        
+
         # Clean index names
         raw_indx = raw_df.index
         if len(raw_indx) > 0 and isinstance(raw_indx[0], str):
@@ -73,17 +75,17 @@ def csv_loader(file_path: str, reset_indx: bool = True, optimize_memory: bool = 
 
         # Create new DataFrame with cleaned names
         result_df = pd.DataFrame(raw_df.values, columns=unique_cols, index=new_indx)
-        
+
         # Optimize memory usage if requested
         if optimize_memory:
             result_df = _optimize_dataframe_memory(result_df)
-        
+
         # Clean up
         del raw_df
         gc.collect()
-        
+
         return result_df
-        
+
     except pd.errors.EmptyDataError:
         raise pd.errors.EmptyDataError(f"The CSV file {file_path} is empty")
     except Exception as e:
@@ -94,13 +96,13 @@ def _optimize_dataframe_memory(df: pd.DataFrame) -> pd.DataFrame:
     """Optimize DataFrame memory usage by downcasting numeric types"""
     try:
         # Downcast float columns
-        for col in df.select_dtypes(include=['float64']).columns:
-            df[col] = pd.to_numeric(df[col], downcast='float', errors='ignore')
-        
+        for col in df.select_dtypes(include=["float64"]).columns:
+            df[col] = pd.to_numeric(df[col], downcast="float", errors="ignore")
+
         # Downcast integer columns
-        for col in df.select_dtypes(include=['int64']).columns:
-            df[col] = pd.to_numeric(df[col], downcast='integer', errors='ignore')
-            
+        for col in df.select_dtypes(include=["int64"]).columns:
+            df[col] = pd.to_numeric(df[col], downcast="integer", errors="ignore")
+
         return df
     except Exception:
         # If optimization fails, return original DataFrame
@@ -121,7 +123,7 @@ def df_slicer(file_path: str, histone_name: List[str]) -> pd.DataFrame:
     -------
     pd.DataFrame
         New pandas DataFrame with selected columns
-        
+
     Raises
     ------
     ValueError
@@ -129,49 +131,49 @@ def df_slicer(file_path: str, histone_name: List[str]) -> pd.DataFrame:
     """
     if not histone_name:
         raise ValueError("histone_name list cannot be empty")
-    
+
     df = csv_loader(file_path)
-    
+
     # Normalize requested column names
     histone_name_normalized = [name.strip().lower() for name in histone_name]
 
     # Create mapping of lowercase column names to actual column names
-    column_mapping = {
-        col.lower(): col for col in df.columns
-    }
-    
+    column_mapping = {col.lower(): col for col in df.columns}
+
     # Find matching columns
     found_columns = []
     missing_columns = []
-    
+
     for requested_col in histone_name_normalized:
         if requested_col in column_mapping:
             found_columns.append(column_mapping[requested_col])
         else:
             missing_columns.append(requested_col)
-    
+
     if not found_columns:
-        raise ValueError(f"None of the requested columns {histone_name} found in DataFrame")
-    
+        raise ValueError(
+            f"None of the requested columns {histone_name} found in DataFrame"
+        )
+
     if missing_columns:
         print(f"Warning: The following columns were not found: {missing_columns}")
-    
+
     return df.loc[:, found_columns]
 
 
 def json_file_loader(path: str) -> Dict[str, Any]:
     """Load JSON file and return as dictionary
-    
+
     Parameters
     ----------
     path : str
         Path to JSON file
-        
+
     Returns
     -------
     Dict[str, Any]
         Dictionary loaded from JSON file
-        
+
     Raises
     ------
     FileNotFoundError
@@ -181,9 +183,9 @@ def json_file_loader(path: str) -> Dict[str, Any]:
     """
     if not os.path.exists(path):
         raise FileNotFoundError(f"JSON file not found: {path}")
-    
+
     try:
-        with open(path, "r", encoding='utf-8') as json_file:
+        with open(path, "r", encoding="utf-8") as json_file:
             data = json.load(json_file)
         return data
     except json.JSONDecodeError as e:
@@ -201,7 +203,7 @@ def json_file_saver(data_dict: Dict[str, Any], file_path: str) -> None:
         Dictionary to save
     file_path : str
         Path to output file
-        
+
     Raises
     ------
     TypeError
@@ -210,8 +212,8 @@ def json_file_saver(data_dict: Dict[str, Any], file_path: str) -> None:
     try:
         # Create directory if it doesn't exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
-        with open(file_path, "w", encoding='utf-8') as json_file:
+
+        with open(file_path, "w", encoding="utf-8") as json_file:
             json.dump(data_dict, json_file, indent=4, ensure_ascii=False)
     except TypeError as e:
         raise TypeError(f"Data is not JSON serializable: {str(e)}")
@@ -221,19 +223,19 @@ def json_file_saver(data_dict: Dict[str, Any], file_path: str) -> None:
 
 def dict_order(raw_dict: Dict[str, Any], order_keys: List[str]) -> Dict[str, Any]:
     """Reorder dictionary according to specified key order
-    
+
     Parameters
     ----------
     raw_dict : Dict[str, Any]
         Original dictionary
     order_keys : List[str]
         List of keys in desired order
-        
+
     Returns
     -------
     Dict[str, Any]
         Reordered dictionary
-        
+
     Raises
     ------
     KeyError
@@ -241,22 +243,22 @@ def dict_order(raw_dict: Dict[str, Any], order_keys: List[str]) -> Dict[str, Any
     """
     if not order_keys:
         return raw_dict.copy()
-    
+
     missing_keys = [key for key in order_keys if key not in raw_dict]
     if missing_keys:
         raise KeyError(f"Keys not found in dictionary: {missing_keys}")
-    
+
     return {key: raw_dict[key] for key in order_keys if key in raw_dict}
 
 
 def validate_dataframe(df: pd.DataFrame) -> bool:
     """Validate DataFrame for common issues
-    
+
     Parameters
     ----------
     df : pd.DataFrame
         DataFrame to validate
-        
+
     Returns
     -------
     bool
@@ -265,17 +267,17 @@ def validate_dataframe(df: pd.DataFrame) -> bool:
     if df.empty:
         print("Warning: DataFrame is empty")
         return False
-    
+
     # Check for all NaN columns
     all_nan_cols = df.columns[df.isna().all()].tolist()
     if all_nan_cols:
         print(f"Warning: Columns with all NaN values: {all_nan_cols}")
-    
+
     # Check for duplicate columns
     duplicate_cols = df.columns[df.columns.duplicated()].tolist()
     if duplicate_cols:
         print(f"Warning: Duplicate column names: {duplicate_cols}")
-    
+
     return True
 
 
@@ -283,7 +285,7 @@ def memory_usage_report(df: pd.DataFrame) -> None:
     """Print memory usage report for DataFrame"""
     memory_usage = df.memory_usage(deep=True)
     total_memory = memory_usage.sum() / (1024 * 1024)  # Convert to MB
-    
+
     print(f"DataFrame Memory Usage:")
     print(f"Shape: {df.shape}")
     print(f"Total Memory: {total_memory:.2f} MB")
