@@ -58,5 +58,5 @@ __pycache__/
 # Poetry cache (local)
 .cache/pypoetry/
 /testing_mmi
-data/
-output/
+/data/
+/output/
