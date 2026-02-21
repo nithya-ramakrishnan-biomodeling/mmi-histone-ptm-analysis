@@ -1,8 +1,0 @@
-H3K4me
-H3S10ph
-H3K4ac
-H4R3me2s
-H3K9ac
-H3K36me
-H3K27ac
-H2AS129ph

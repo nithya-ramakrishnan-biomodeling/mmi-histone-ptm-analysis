@@ -1,8 +1,0 @@
-H4R3me2s
-H3K27ac
-H3K23ac
-H3K79me
-H4K8ac
-H3K79me3
-H3K56ac
-H3K36me2

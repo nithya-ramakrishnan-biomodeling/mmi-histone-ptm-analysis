@@ -1,3 +1,0 @@
-H3K27me1
-H3R2me2
-H4K20me1

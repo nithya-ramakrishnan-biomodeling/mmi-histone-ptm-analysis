@@ -1,3 +1,0 @@
-H3K36ac
-H3K27me3
-H4K5ac

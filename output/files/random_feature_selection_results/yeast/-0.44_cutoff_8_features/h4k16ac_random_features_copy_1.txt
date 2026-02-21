@@ -1,8 +1,0 @@
-H3K36me3
-H3K14ac
-H3K9ac
-H3S10ph
-H4K8ac
-H3K36me
-Htz1
-H3K4ac

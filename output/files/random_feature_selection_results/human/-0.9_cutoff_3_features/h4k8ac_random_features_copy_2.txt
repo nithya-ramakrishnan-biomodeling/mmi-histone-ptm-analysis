@@ -1,3 +1,0 @@
-H3K36me3
-H3K4ac
-H2AZ

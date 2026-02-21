@@ -1,7 +1,0 @@
-H3K4ac
-H3K23ac
-Htz1
-H2AS129ph
-H3K9ac
-H2AK5ac
-H3K36me3

@@ -1,0 +1,218 @@
+{
+    "40": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K9ac",
+            "H3K79me3",
+            "H3K23ac",
+            "H3K56ac",
+            "H4R3me2s",
+            "H3K4me",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me"
+        ],
+        "triplet": "H3K9ac_H4K16ac_H4R3me2s",
+        "mmi": -0.2128836259658886
+    },
+    "50": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K9ac",
+            "H3K79me3",
+            "H3K23ac",
+            "H3K56ac",
+            "H4R3me2s",
+            "H3K4me",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me"
+        ],
+        "triplet": "H3K9ac_H4K16ac_H4R3me2s",
+        "mmi": -0.2364207043600839
+    },
+    "60": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K9ac",
+            "H3K79me3",
+            "H3K23ac",
+            "H3K56ac",
+            "H4R3me2s",
+            "H3K4me",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me"
+        ],
+        "triplet": "H3K9ac_H4K16ac_H4R3me2s",
+        "mmi": -0.25961131830879935
+    },
+    "70": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K9ac",
+            "H3K79me3",
+            "H3K23ac",
+            "H3K56ac",
+            "H4R3me2s",
+            "H3K4me",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me"
+        ],
+        "triplet": "H3K9ac_H4K16ac_H4R3me2s",
+        "mmi": -0.28400833281006577
+    },
+    "80": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K79me3",
+            "H3K36me3",
+            "H3K23ac",
+            "H4R3me2s",
+            "H3K4me",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me",
+            "H3K36me2"
+        ],
+        "triplet": "H3K4me2_H3K36me2_H3K36me3",
+        "mmi": -0.32278677341392026
+    },
+    "90": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K36me3",
+            "H2AS129ph",
+            "H4R3me2s",
+            "H3K4me",
+            "H3K18ac",
+            "H4K16ac",
+            "H3K4me3",
+            "H4K8ac",
+            "H3K36me2"
+        ],
+        "triplet": "H3K4me3_H3K36me2_H3K36me3",
+        "mmi": -0.3654879911155433
+    },
+    "100": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K36me3",
+            "H2AS129ph",
+            "H4R3me2s",
+            "H3K4me",
+            "H3K18ac",
+            "H4K16ac",
+            "H3K4me3",
+            "H4K8ac",
+            "H3K36me2"
+        ],
+        "triplet": "H4K8ac_H4K16ac_H4R3me2s",
+        "mmi": -0.41668590362863256
+    },
+    "110": {
+        "feature": [
+            "H3K4ac",
+            "H3K14ac",
+            "H3K4me2",
+            "H3K36me3",
+            "H3K79me3",
+            "H2AS129ph",
+            "H4R3me2s",
+            "H3K4me",
+            "H3K18ac",
+            "H3K4me3",
+            "H4K16ac",
+            "H3K36me2"
+        ],
+        "triplet": "H3K18ac_H3K4me3_H3K79me3",
+        "mmi": -0.47505137347146764
+    },
+    "120": {
+        "feature": [
+            "H3K14ac",
+            "H3K4ac",
+            "H3K4me2",
+            "H3K36me3",
+            "H3K79me3",
+            "H2AS129ph",
+            "H4R3me2s",
+            "H3K4me",
+            "H3K18ac",
+            "H3K4me3",
+            "H4K16ac",
+            "H3K36me2"
+        ],
+        "triplet": "H3K4me2_H3K4me_H3K36me3",
+        "mmi": -0.5617917750853039
+    },
+    "130": {
+        "feature": [
+            "H3K14ac",
+            "H3K4me2",
+            "H3K36me3",
+            "H3K79me3",
+            "H2AS129ph",
+            "H3K4me",
+            "H3K18ac",
+            "H3K4me3",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me",
+            "H3K36me2"
+        ],
+        "triplet": "H3K18ac_H3K4me3_H3K79me3",
+        "mmi": -0.652053827780227
+    },
+    "140": {
+        "feature": [
+            "H3K4me2",
+            "H3K9ac",
+            "H3K36me3",
+            "H3K79me3",
+            "H2AS129ph",
+            "H3K4me",
+            "H3K18ac",
+            "H3K4me3",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me",
+            "H3K36me2"
+        ],
+        "triplet": "H3K9ac_H3K4me3_H3K36me3",
+        "mmi": -0.7568082777081102
+    },
+    "150": {
+        "feature": [
+            "H3K4me2",
+            "H3K9ac",
+            "H3K36me3",
+            "H2AS129ph",
+            "H4K5ac",
+            "H3K4me",
+            "H3K18ac",
+            "H3K4me3",
+            "H4K16ac",
+            "H4K8ac",
+            "H3K79me",
+            "H3K36me2"
+        ],
+        "triplet": "H3K9ac_H3K4me3_H3K36me3",
+        "mmi": -0.876688392289239
+    }
+}

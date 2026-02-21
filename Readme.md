@@ -1,172 +1,132 @@
-# Multivariate PTMs Analysis
+## Project: Multivariate PTM Analysis
+> Note: This project implements a comprehensive multivariate analysis framework for Post-Translational Modifications (PTMs) of histone proteins, using mutual information, PCA, regression, and other statistical methods to uncover co-modification patterns.
 
-This repository contains a comprehensive pipeline for analyzing post-translational modifications (PTMs) using multivariate analysis methods, including mutual information analysis, PCA, machine learning predictions, and pseudo-inverse analysis.
+----------
+### Tree
+- [multivariate_ptm_analysis/](./)
+  - [Readme.md](./Readme.md) - Main project readme
+  - [00_mmi_pipeline/](./00_mmi_pipeline/) - Full MMI pipeline (preprocessing → MMI → feature selection → regression)
+  - [01_pca_analysis/](./01_pca_analysis/) - PCA analysis using covariance and mutual information matrices
+  - [02_mmi_analysis/](./02_mmi_analysis/) - Multivariate Mutual Information analysis
+  - [03_regression_prediction_analysis/](./03_regression_prediction_analysis/) - Regression-based histone modification prediction
+  - [04_pseudo_inverse_analysis/](./04_pseudo_inverse_analysis/) - Pseudo-inverse based analysis
+  - [05_total_correlation_analysis/](./05_total_correlation_analysis/) - Total correlation analysis
+  - [06_data_fit_analysis/](./06_data_fit_analysis/) - Data distribution fitting analysis
+  - [07_review_analysis/](./07_review_analysis/) - Review and summary analysis
+  - [multivariate_utils/](./multivariate_utils/) - Shared utility functions and classes
+  - [data/](./data/) - Input and processed data files
 
----
+----------
 
-## Directory Structure
+## Overview
 
-- [`data/`](./data/): Raw and processed data for human and yeast
-- [`datahandler/`](./datahandler/): Data loading, processing, and file operations
-- [`mi_btw_yhat_and_y/`](./mi_btw_yhat_and_y/): MI between predicted and actual values
-- [`multivariate_mi_analysis/`](./multivariate_mi_analysis/): Multivariate MI analysis and entropy calculations
-- [`output/`](./output/): Output files, images, and analysis results
-- [`path_utils/`](./path_utils/): Project path management and configuration
-- [`pca_analysis/`](./pca_analysis/): Principal component analysis scripts
-- [`pseudo_inverse/`](./pseudo_inverse/): Pseudo-inverse based feature selection and analysis
-- [`ptms_predictions/`](./ptms_predictions/): PTM prediction using XGBoost and OMP
-- [`main.py`](./main.py): Main pipeline orchestrator
+This project provides a complete analytical framework for studying histone Post-Translational Modifications (PTMs) across organisms (e.g., yeast, human). It uses information-theoretic and statistical methods to identify co-modification patterns, select informative features, and predict histone modification states.
 
----
+### Key Methods
+- **Multivariate Mutual Information (MMI)** - Identifies synergistic/redundant relationships among histone modifications
+- **Principal Component Analysis (PCA)** - Reduces dimensionality using covariance and MI-based approaches
+- **Regression Prediction** - Predicts histone modification levels from selected features
+- **Pseudo-Inverse Analysis** - Solves underdetermined systems for modification relationships
+- **Total Correlation** - Measures multivariate statistical dependence
+- **Data Fit Analysis** - Evaluates distributional assumptions of the data
 
-## Pipeline Overview
+----------
 
-This project implements a five-stage analysis pipeline for histone post-translational modifications:
+## Setup
 
-1. **PCA Analysis**  
-   Principal component analysis with eigen decomposition.
+### 1. Create and Activate Virtual Environment
+```sh
+# Create virtual environment in the root directory
+python -m venv venv
 
-2. **Multivariate MI Analysis**  
-   Mutual information calculations, redundancy removal, and entropy optimization.
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
 
-3. **PTM Predictions**  
-   Machine learning predictions using XGBoost and feature selection.
+# Linux/Mac:
+source venv/bin/activate
+```
 
-4. **Pseudo-Inverse Analysis**  
-   Matrix-based feature importance and prediction analysis.
+### 2. Install `multivariate_utils` in Editable Mode
+```sh
+# From the root directory of the project
+pip install -e ./multivariate_utils
+```
+> **Note:** Installing in editable mode (`-e`) allows changes to `multivariate_utils` to be reflected immediately without reinstalling.
 
-5. **MI Between Y-hat and Y**  
-   Quality assessment of predictions using mutual information.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.6+
-- Recommended: Use a virtual environment
-
-### Setup
-
-#### Create and Activate a Virtual Environment
-
-- On Windows:
-    ```sh
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-- On macOS and Linux:
-    ```sh
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-#### Install Dependencies
-
+### 3. Install Dependencies
 ```sh
 pip install -r requirements.txt
 ```
 
----
+----------
 
-## Running the Pipeline
+## Modules
 
-### Run the Complete Pipeline
+### [`00_mmi_pipeline/`](./00_mmi_pipeline/)
+End-to-end pipeline for MMI-based analysis:
+1. Data preprocessing and normalization
+2. MMI calculation for all histone triplets
+3. Feature selection based on MMI thresholds
+4. Regression prediction using selected features
 
-```sh
-python main.py
+### [`01_pca_analysis/`](./01_pca_analysis/)
+PCA of histone modification data using:
+- Traditional covariance-based PCA
+- Mutual Information-based PCA
+
+### [`02_mmi_analysis/`](./02_mmi_analysis/)
+Standalone MMI analysis scripts for computing and visualizing multivariate mutual information across histone features.
+
+### [`03_regression_prediction_analysis/`](./03_regression_prediction_analysis/)
+Regression models for predicting histone modifications using cross-validation and R² scoring.
+
+### [`04_pseudo_inverse_analysis/`](./04_pseudo_inverse_analysis/)
+Pseudo-inverse based approach to analyze relationships between histone modifications.
+
+### [`05_total_correlation_analysis/`](./05_total_correlation_analysis/)
+Total correlation analysis to measure overall statistical dependence among histone modifications.
+
+### [`06_data_fit_analysis/`](./06_data_fit_analysis/)
+Analyzes how well the histone modification data fits assumed statistical distributions.
+
+### [`multivariate_utils/`](./multivariate_utils/)
+Shared utilities used across all modules:
+- Data loading and saving
+- Parallel processing helpers
+- Logging utilities
+- Project path management
+- Statistical computation tools
+
+----------
+
+## Dependencies
+
+- `numpy`
+- `pandas`
+- `scipy`
+- `scikit-learn`
+- `click`
+- `PyYAML`
+- `matplotlib`
+- `multivariate_utils` (internal)
+
+----------
+
+## Data
+
+Input data should be placed in the `data/` directory:
+```
+data/
+├── raw/                  - Raw histone modification data
+└── processed/            - Preprocessed data ready for analysis
+    ├── yeast/            - Yeast-specific processed data
+    ├── human/            - Human-specific processed data
+    └── mi_bin_info.json  - Binning information for MMI calculation
 ```
 
-#### Additional Options
+----------
 
-```sh
-# Run with parallel processing
-python main.py -p
-
-# Run specific modules only (e.g., PCA and multivariate analysis)
-python main.py -m pca multivariate
-
-# Stop execution if any module fails
-python main.py -s
-
-# Show verbose output
-python main.py -v
-```
-
-### Run Individual Modules
-
-```sh
-# 1. PCA Analysis
-python pca_analysis/pca_main_run.py -o human -p
-
-# 2. Multivariate MI Analysis
-python multivariate_mi_analysis/multivariate_main_run.py -o yeast -p
-
-# 3. PTM Predictions
-python ptms_predictions/ptm_main_run.py -p
-
-# 4. Pseudo-Inverse Analysis
-python pseudo_inverse/pseudo_invrs_main_run.py -p
-
-# 5. MI Between Y-hat and Y
-python mi_btw_yhat_and_y/mi_yhat_y_main_run.py -p
-```
-
-### Special Analysis: Bin-based Entropy Calculation
-
-```sh
-python multivariate_mi_analysis/bin_num_based_entropy_calculation.py -o human yeast -g
-```
-
----
-
-## Output Structure
-
-Results are organized in the [`output/`](./output/) directory:
-
-```
-output/
-├── files/
-│   ├── pca_analysis/
-│   ├── multivariate_analysis/
-│   ├── ptms_predictions/
-│   ├── pseudo_inverse/
-│   └── mi_btw_yhat_and_y/
-└── images/
-    ├── pca_analysis/
-    ├── multivariate_analysis/
-    ├── ptms_predictions/
-    ├── pseudo_inverse/
-    └── mi_btw_yhat_and_y/
-```
-
----
-
-## Configuration
-
-- **Organisms:** Human and yeast
-- **MI Methods:** Pairwise and three-way mutual information
-- **Prediction Models:** XGBoost with hyperparameter optimization
-- **Feature Selection:** Orthogonal matching pursuit and pseudo-inverse methods
-- **Cutoff Values:** Organism-specific thresholds for MI calculations
-
----
-
-## Troubleshooting
-
-- **Memory Errors:** Use the `--memory_limit` parameter to constrain memory usage
-- **Unicode Errors on Windows:** Scripts use ASCII-compatible output formatting
-- **Missing Dependencies:** Ensure all packages in `requirements.txt` are installed
-
-### Performance Optimization
-
-- Use `-p` flag for parallel processing
-- Adjust `--cpu_limit` parameter based on your system
-- For large datasets, consider running modules individually
-
----
-
-## Support
-
-For questions or issues, check the individual script help messages using the `-h`
+## Notes
+- Results are saved in the respective module output directories.
+- See individual module `README.md` files for detailed usage.

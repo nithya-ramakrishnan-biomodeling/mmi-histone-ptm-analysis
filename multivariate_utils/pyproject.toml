@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "multivariate_utils"
+version = "0.1.0"
+description = "Reusable utilities for data science projects"
+authors = ["Your Name"]
+packages = [{include = "multivariate_utils"}]
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

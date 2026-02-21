@@ -1,3 +1,0 @@
-H3K9me1
-H2AZ
-H3K27ac

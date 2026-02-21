@@ -1,6 +1,0 @@
-H3K79me
-H3K4me3
-H3S10ph
-H4K20me
-H3K79me3
-Htz1

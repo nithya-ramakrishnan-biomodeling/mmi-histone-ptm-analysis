@@ -1,0 +1,194 @@
+{
+    "40": {
+        "feature": [
+            "H3K4me2",
+            "H3K9ac",
+            "H2BK5me1",
+            "H2AZ",
+            "H4K20me1",
+            "H3K9me1",
+            "H2AK5ac",
+            "H3K4me3",
+            "H2BK120ac",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me2_H3K9ac",
+        "mmi": -0.09059571629098251
+    },
+    "50": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H2AZ",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H4K12ac",
+        "mmi": -0.1202727037011222
+    },
+    "60": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H4K12ac",
+        "mmi": -0.16405937319245467
+    },
+    "70": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H4K12ac",
+        "mmi": -0.2148080205891656
+    },
+    "80": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H4K12ac",
+        "mmi": -0.2744279304263557
+    },
+    "90": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.33781201083180434
+    },
+    "100": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.4053992264448958
+    },
+    "110": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H4K12ac",
+        "mmi": -0.4867278364739249
+    },
+    "120": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.5591218344658788
+    },
+    "130": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.6356173401476966
+    },
+    "140": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.7086693072283428
+    },
+    "150": {
+        "feature": [
+            "H4K12ac",
+            "H4K91ac",
+            "H3K4me2",
+            "H3K27ac",
+            "H2BK5me1",
+            "H4K20me1",
+            "H3K9me1",
+            "H3K18ac",
+            "H3K4me3",
+            "H3K4me1"
+        ],
+        "triplet": "H3K4me1_H3K4me3_H3K18ac",
+        "mmi": -0.785191359225685
+    }
+}

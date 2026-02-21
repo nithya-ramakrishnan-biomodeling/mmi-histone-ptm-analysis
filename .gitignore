@@ -1,15 +1,9 @@
-# Python bytecode and cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-*.egg-info/
 .venv/
-venv/
-env/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+*.egg-info/
 
 # Node.js
 node_modules/
@@ -18,12 +12,12 @@ npm-debug.log
 # macOS
 .DS_Store
 
-# IDE/project files
+# IDE
 .vscode/
 .idea/
 
 # Build files
-build/
+/build/
 dist/
 *.o
 *.exe
@@ -37,32 +31,30 @@ dist/
 # Sensitive files
 .env
 
-# Database files
+# Database
 *.sqlite
 *.db
 
-# Data paths (raw and processed)
-data/processed/human/
-data/processed/yeast/
-data/raw/
+# 
 
-# Output files and intermediate results
-output/files/yeast/pca*
-output/files/human/pca*
-output/files/pca/human/histone_cov_with_eig_transf_features.csv
-output/files/pca/human/histone_mi_with_eig_transf_features.csv
-output/files/pca/yeast/histone_cov_with_eig_transf_features.csv
-output/files/pca/yeast/histone_mi_with_eig_transf_features.csv
-output/files/pca/human/histone_cov_with_eig_transf_10_features.csv
-output/files/pca/human/histone_cov_with_eig_transf_5_features.csv
-output/files/pca/human/histone_mi_with_eig_transf_10_features.csv
-output/files/pca/human/histone_mi_with_eig_transf_5_features.csv
-output/files/pca/yeast/histone_cov_with_eig_transf_10_features.csv
-output/files/pca/yeast/histone_cov_with_eig_transf_5_features.csv
-output/files/pca/yeast/histone_mi_with_eig_transf_10_features.csv
-output/files/pca/yeast/histone_mi_with_eig_transf_5_features.csv
+data/processed/human/human_zero_mean.csv
+data/processed/yeast/yeast_zero_mean.csv
 
-output/entropy_mi_results/
+output/files/pca
+output/images
 
-# General output and results
-output/images/
+# Virtualenv created by poetry or venv
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache / test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Poetry cache (local)
+.cache/pypoetry/
+/testing_mmi

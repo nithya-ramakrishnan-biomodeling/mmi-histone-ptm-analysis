@@ -1,0 +1,52 @@
+# ──────────────────────────────────────────────
+# MMI Pipeline Configuration
+# ──────────────────────────────────────────────
+# Global settings
+stop_on_error: true
+
+# Shared variables — reusable across steps
+variables:
+  output_dir: "output\\mmi_results"
+  raw_data: "data/processed/yeast/yeast_zero_mean.csv"
+  preprocessed_data: "${output_dir}\\preprocessed_data.csv"
+  mmi_results: "${output_dir}\\mmi_results.json"
+  selected_features: "${output_dir}\\selected_features.json"
+  prediction_output: "${output_dir}\\prediction_results.json"
+
+# Per-step configuration
+steps:
+  preprocess:
+    enabled: true
+    args:
+      --file-path: "${raw_data}"
+      --normalization-method: "zero_mean"
+      --clip-min-value: null
+      --clip-max-value: null
+      --impute-missing-values: False
+      --impute-strategy: "mean"
+      --output-path: "${preprocessed_data}"
+
+  mmi:
+    enabled: true
+    args:
+      --file-path: "${preprocessed_data}"        
+      --n-bins: 70
+      --global-max: 4.0
+      --global-min: -6.0
+      --output-path: "${mmi_results}"             
+  
+  feature:
+    enabled: true
+    args:
+      --mmi-value-path: "${mmi_results}"              
+      --threshold: -0.285
+      --output-path: "${selected_features}"
+
+  prediction:
+    enabled: true
+    args:
+      --feature-file: "${preprocessed_data}"        
+      --features-file: "${selected_features}"       
+      --output-path: "${prediction_output}"
+      --threshold: -0.285
+      --n-jobs: 1
